@@ -1,4 +1,9 @@
 <script setup>
+import MainToolbar from "layouts/footer/FooterMainToolbar.vue";
+
+defineOptions({
+  name: "AppFooter",
+});
 // imports
 
 // variables
@@ -7,15 +12,8 @@
 </script>
 
 <template>
-  <q-footer reveal elevated class="bg-grey-8 text-white">
-    <q-toolbar>
-      <q-toolbar-title>
-        <q-avatar>
-          <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"  alt="img"/>
-        </q-avatar>
-        <div>Title</div>
-      </q-toolbar-title>
-    </q-toolbar>
+  <q-footer reveal elevated class="bg-grey-7 text-white">
+    <main-toolbar></main-toolbar>
   </q-footer>
 </template>
 

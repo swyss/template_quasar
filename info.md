@@ -52,8 +52,11 @@ Separate Layout Components
 > https://pinia.vuejs.org/core-concepts/actions.html
 > https://github.com/posva/mande
 
-#### AppCharacteristics
-#### demo
+#### AppProperties
+
+#### AppInfo
+
+#### demo/example
 ##### Counter
 ##### chart-data
 ##### weather

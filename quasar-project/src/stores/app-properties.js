@@ -1,7 +1,9 @@
-import { defineStore } from 'pinia'
-import {ref} from "vue";
+import { defineStore } from "pinia";
+import { useQuasar } from "quasar";
+import { ref } from "vue";
 //
-export const useAppProperties = defineStore('properties', () => {
+export const useAppProperties = defineStore("properties", () => {
+  const $q = useQuasar();
   const leftDrawerOpen = ref(false);
   const rightDrawerOpen = ref(false);
   //
@@ -11,6 +13,21 @@ export const useAppProperties = defineStore('properties', () => {
   function toggleRightDrawer() {
     rightDrawerOpen.value = !rightDrawerOpen.value;
   }
-//
-  return { leftDrawerOpen, rightDrawerOpen,toggleLeftDrawer,toggleRightDrawer}
-})
+  function toggleDarkMode() {
+    $q.dark.toggle();
+  }
+  function init() {
+    leftDrawerOpen.value = false;
+    rightDrawerOpen.value = false;
+    $q.dark.set(false);
+  }
+  //
+  return {
+    leftDrawerOpen,
+    rightDrawerOpen,
+    init,
+    toggleLeftDrawer,
+    toggleRightDrawer,
+    toggleDarkMode,
+  };
+});

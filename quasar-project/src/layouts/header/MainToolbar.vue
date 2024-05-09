@@ -1,28 +1,21 @@
 <script setup>
 // imports
-import { ref } from "vue";
+import { useAppProperties} from "stores/app-properties";
 // variables
-const leftDrawerOpen = ref(false);
-const rightDrawerOpen = ref(false);
+const app_properties = useAppProperties();
 // functions
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
-function toggleRightDrawer() {
-  rightDrawerOpen.value = !rightDrawerOpen.value;
-}
 </script>
 
 <template>
   <q-toolbar>
-    <q-btn dense flat round icon="bi-list" @click="toggleLeftDrawer" />
+    <q-btn dense flat round icon="bi-list" @click="app_properties.toggleLeftDrawer()" />
     <q-toolbar-title>
       <q-avatar>
         <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"  alt="img"/>
       </q-avatar>
       Title
     </q-toolbar-title>
-    <q-btn dense flat round icon="bi-sliders" @click="toggleRightDrawer" />
+    <q-btn dense flat round icon="bi-sliders" @click="app_properties.toggleRightDrawer()" />
   </q-toolbar>
 </template>
 

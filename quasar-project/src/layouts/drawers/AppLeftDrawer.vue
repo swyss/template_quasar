@@ -1,13 +1,13 @@
 <script setup>
 // imports
-import {ref} from "vue";
+import { useAppProperties} from "stores/app-properties";
 // variables
-const leftDrawerOpen = ref(false);
+const app_properties = useAppProperties();
 // functions
 </script>
 
 <template>
-  <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+  <q-drawer show-if-above v-model="app_properties.leftDrawerOpen" side="left" bordered>
     <!-- drawer content -->
   </q-drawer>
 </template>

@@ -1,13 +1,13 @@
 <script setup>
 // imports
-import {ref} from "vue";
+import { useAppProperties} from "stores/app-properties";
 // variables
-const rightDrawerOpen = ref(false);
+const app_properties = useAppProperties();
 // functions
 </script>
 
 <template>
-  <q-drawer v-model="rightDrawerOpen" side="right" overlay elevated>
+  <q-drawer v-model="app_properties.rightDrawerOpen" side="right" overlay elevated>
     <!-- drawer content -->
   </q-drawer>
 </template>

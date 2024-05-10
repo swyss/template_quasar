@@ -53,8 +53,9 @@ const menuList = [
     v-model="app_properties.leftDrawerOpen"
     side="left"
     bordered
+    class="q-pa-sm"
   >
-    <q-scroll-area class="fit">
+    <q-scroll-area class="fit q-pa-sm">
       <q-list>
         <template v-for="(menuItem, index) in menuList" :key="index">
           <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>

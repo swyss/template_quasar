@@ -92,6 +92,7 @@ module.exports = configure(function (/* ctx */) {
         iconSet: "bootstrap-icons", // Quasar icon set
         lang: "en-US", // Quasar language pack
         dark: false,
+        notify: true/* look at QuasarConfOptions from the API card */
       },
 
       // For special cases outside of where the auto-import strategy can have an impact
@@ -102,7 +103,9 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: [
+        'Notify'
+      ],
     },
 
     // animations: 'all', // --- includes all animations

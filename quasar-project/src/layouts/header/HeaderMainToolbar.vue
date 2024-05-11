@@ -28,9 +28,10 @@ const app_properties = useAppProperties();
     </q-toolbar-title>
     <q-space></q-space>
     <q-tabs align="left">
-      <q-route-tab to="/page1" label="components" />
-      <q-route-tab to="/page2" label="graph" />
-      <q-route-tab to="/page3" label="weather" />
+      <q-route-tab to="/components" label="components" />
+      <q-route-tab to="/graphs" label="graphs" />
+      <q-route-tab to="/weather" label="weather" />
+      <q-route-tab to="/axios" label="axios" />
     </q-tabs>
     <q-space></q-space>
     <q-separator vertical inset color="$on_primary" />

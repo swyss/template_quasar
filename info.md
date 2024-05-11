@@ -18,10 +18,10 @@
 ```
 
 ## Install modes
-> ssr (Server Side Rendering) and pwa (Progressive Web App)
+> ssr (Server Side Rendering) and pwa (progressive Web App)
+SSR -> safer/more performant/SEO (Search-Engine Optimized)
 ```bash
 quasar mode add ssr
-
 quasar mode add pwa
 ```
 > https://quasar.dev/quasar-cli-vite/developing-ssr/introduction

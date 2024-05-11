@@ -3,8 +3,8 @@ defineOptions({
   name: "TitleToolbar",
 });
 // imports
-import { useAppProperties } from "stores/app-properties";
-import { useAppInfos } from "stores/app-info";
+import { useAppProperties } from "stores/general/app-properties";
+import { useAppInfos } from "stores/general/app-info";
 // variable
 const app_properties = useAppProperties();
 const app_infos = useAppInfos();

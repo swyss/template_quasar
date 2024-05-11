@@ -3,7 +3,7 @@ defineOptions({
   name: "MainToolbar",
 });
 // imports
-import { useAppProperties } from "stores/app-properties";
+import { useAppProperties } from "stores/general/app-properties";
 // variables
 const app_properties = useAppProperties();
 // functions

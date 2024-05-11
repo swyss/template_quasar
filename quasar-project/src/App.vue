@@ -4,18 +4,35 @@
 
 <script setup>
 // imports
-import { useAppProperties } from "stores/app-properties";
-import { useAppInfos } from "stores/app-info";
+import { useAppProperties } from "stores/general/app-properties";
+import { useAppInfos } from "stores/general/app-info";
+import {onMounted, onUnmounted, onUpdated, ref} from "vue";
 // variables
-const app_properties = useAppProperties();
-const app_infos = useAppInfos();
+const appProperties = useAppProperties();
+const appInfos = useAppInfos();
+const counter = ref(0);
 //
 defineOptions({
   name: "App",
 });
 // functions
-setTimeout(() => {
-  app_properties.init();
-  app_infos.printInfo();
-}, 10);
+console.log(`APP`)
+// Lifecycle Hooks
+// onMounted Hook: Executes logic after component is mounted
+onMounted(() => {
+  console.log(`APP is now mounted.`)
+  appProperties.init();
+  appInfos.printInfo();
+})
+// onUpdated Hook: Executes logic after component is updated
+onUpdated(() => {
+  console.log('APP is updated');
+});
+// onUnmounted Hook: Executes logic before component is unmounted
+onUnmounted(() => {
+  console.log('APP is unmounted');
+});
+const increment = () => {
+  counter.value++;
+};
 </script>

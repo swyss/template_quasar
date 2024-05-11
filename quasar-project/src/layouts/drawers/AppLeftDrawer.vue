@@ -3,47 +3,11 @@ defineOptions({
   name: "LeftDrawer",
 });
 // imports
-import { useAppProperties } from "stores/app-properties";
+import { useAppProperties } from "stores/general/app-properties";
+import { useAppMenus } from "stores/general/app-menu";
 // variables
 const app_properties = useAppProperties();
-const menuList = [
-  {
-    icon: "bi-list",
-    label: "Inbox",
-    separator: true,
-  },
-  {
-    icon: "bi-list",
-    label: "Spam",
-    separator: true,
-  },
-  {
-    icon: "bi-list",
-    label: "Trash",
-    separator: false,
-  },
-  {
-    icon: "bi-list",
-    label: "Spam",
-    separator: true,
-  },
-  {
-    icon: "bi-list",
-    label: "Settings",
-    separator: false,
-  },
-  {
-    icon: "bi-list",
-    label: "Send Feedback",
-    separator: false,
-  },
-  {
-    icon: "bi-list",
-    iconColor: "primary",
-    label: "Help",
-    separator: false,
-  },
-];
+const app_menus = useAppMenus();
 // functions
 </script>
 
@@ -53,11 +17,11 @@ const menuList = [
     v-model="app_properties.leftDrawerOpen"
     side="left"
     bordered
-    class="q-pa-sm"
+    class="q-pa-sm q-pt-md "
   >
-    <q-scroll-area class="fit q-pa-sm">
+    <q-scroll-area class="fit q-ptb-sm q-pl-sm">
       <q-list>
-        <template v-for="(menuItem, index) in menuList" :key="index">
+        <template v-for="(menuItem, index) in app_menus.leftMenuList" :key="index">
           <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
             <q-item-section avatar>
               <q-icon :name="menuItem.icon" />

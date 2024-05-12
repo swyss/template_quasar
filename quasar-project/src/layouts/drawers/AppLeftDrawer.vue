@@ -17,11 +17,14 @@ const app_menus = useAppMenus();
     v-model="app_properties.leftDrawerOpen"
     side="left"
     bordered
-    class="q-pa-sm q-pt-md "
+    class="q-pa-sm q-pt-md"
   >
     <q-scroll-area class="fit q-ptb-sm q-pl-sm">
       <q-list>
-        <template v-for="(menuItem, index) in app_menus.leftMenuList" :key="index">
+        <template
+          v-for="(menuItem, index) in app_menus.leftMenuList"
+          :key="index"
+        >
           <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
             <q-item-section avatar>
               <q-icon :name="menuItem.icon" />

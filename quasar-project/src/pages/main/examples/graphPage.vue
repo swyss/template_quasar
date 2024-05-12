@@ -1,11 +1,5 @@
-<script setup>
+<script setup></script>
 
-</script>
+<template>CHARTS</template>
 
-<template>
-CHARTS
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -16,13 +16,17 @@ quasar upgrade -i
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
 SPA
+
 ```bash
 quasar dev
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
 SSR
+
 ```bash
 quasar dev -m ssr
 ```

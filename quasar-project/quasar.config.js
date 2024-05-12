@@ -8,6 +8,7 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
+require("dotenv").config();
 const { configure } = require("quasar/wrappers");
 const path = require("path");
 
@@ -92,7 +93,7 @@ module.exports = configure(function (/* ctx */) {
         iconSet: "bootstrap-icons", // Quasar icon set
         lang: "en-US", // Quasar language pack
         dark: false,
-        notify: true/* look at QuasarConfOptions from the API card */
+        notify: true /* look at QuasarConfOptions from the API card */,
       },
 
       // For special cases outside of where the auto-import strategy can have an impact
@@ -103,9 +104,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: [
-        'Notify'
-      ],
+      plugins: ["Notify", "Dialog"],
     },
 
     // animations: 'all', // --- includes all animations
@@ -126,13 +125,13 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-ssr/configuring-ssr
     ssr: {
-      // ssrPwaHtmlFilename: 'offline.html', // do NOT use index.html as name!
+      ssrPwaHtmlFilename: "offline.html", // do NOT use index.html as name!
       // will mess up SSR
 
-      // extendSSRWebserverConf (esbuildConf) {},
-      // extendPackageJson (json) {},
+      extendSSRWebserverConf(esbuildConf) {},
+      extendPackageJson(json) {},
 
-      pwa: false,
+      pwa: true,
 
       // manualStoreHydration: true,
       // manualPostHydrationTrigger: true,

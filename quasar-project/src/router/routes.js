@@ -12,10 +12,22 @@ const routes = [
     children: [
       { path: "", component: () => import("pages/IndexPage.vue") },
       { path: "/hello", component: () => import("pages/main/HelloPage.vue") },
-      { path: "/components", component: () => import("pages/main/examples/componentsPage.vue") },
-      { path: "/graphs", component: () => import("pages/main/examples/graphPage.vue") },
-      { path: "/weather", component: () => import("pages/main/examples/weatherPage.vue") },
-      { path: "/axios", component: () => import("pages/main/examples/axiosPage.vue") },
+      {
+        path: "/components",
+        component: () => import("pages/main/examples/componentsPage.vue"),
+      },
+      {
+        path: "/graphs",
+        component: () => import("pages/main/examples/graphPage.vue"),
+      },
+      {
+        path: "/weather",
+        component: () => import("pages/main/examples/weatherPage.vue"),
+      },
+      {
+        path: "/axios",
+        component: () => import("pages/main/examples/axiosPage.vue"),
+      },
     ],
   },
 

@@ -24,7 +24,10 @@ function handleClick(menuItem) {
   >
     <q-scroll-area class="fit">
       <q-list>
-        <template v-for="(menuItem, index) in app_menus.rightMenuList" :key="index">
+        <template
+          v-for="(menuItem, index) in app_menus.rightMenuList"
+          :key="index"
+        >
           <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
             <q-item-section avatar>
               <q-icon :name="menuItem.icon" />

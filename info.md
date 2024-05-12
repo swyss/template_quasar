@@ -29,6 +29,24 @@ quasar mode add pwa
 
 ✅✅
 
+## Install packages
+### lodash
+Lodash modular utilities.
+> https://lodash.com/
+
+```bash
+yarn add lodash
+```
+✅⭕
+
+### dotenv
+Loads environment variables from .env file
+> https://github.com/motdotla/dotenv#readme
+
+```bash
+yarn add dotenv
+```
+✅⭕
 ## Config APP
 
 ### Layout

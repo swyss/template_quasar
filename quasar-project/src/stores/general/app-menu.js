@@ -44,7 +44,7 @@ export const useAppMenus = defineStore("menus", () => {
       icon: "bi-list",
       label: "Inbox",
       separator: true,
-    }
+    },
   ];
   //
   return { leftMenuList, rightMenuList };

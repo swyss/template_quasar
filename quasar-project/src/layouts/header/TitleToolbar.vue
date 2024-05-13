@@ -1,38 +1,54 @@
 <script setup>
+import {ref} from "vue";
+
 defineOptions({
   name: "TitleToolbar",
 });
 // imports
 import { useAppProperties } from "stores/general/app-properties";
 import { useAppInfos } from "stores/general/app-info";
+import UserLogin from "pages/user/LoginPage.vue";
+import InfoPage from "pages/general/InfoPage.vue";
 // variable
-const app_properties = useAppProperties();
-const app_infos = useAppInfos();
+const appProperties = useAppProperties();
+const appInfos = useAppInfos();
+const loginInception= ref(false)
+const infoInception= ref(false)
 // functions
+function clickLoginBtn()
+{
+  loginInception.value = true;
+}
+function clickInfoBtn()
+{
+  infoInception.value = true;
+  appInfos.printInfo();
+}
 </script>
-
 <template>
   <q-toolbar>
     <q-toolbar-title>
       <q-avatar>
-        <img
-          src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"
-          alt="alt"
-        />
+
       </q-avatar>
       Title
     </q-toolbar-title>
     <q-space></q-space>
-    <q-btn padding="sm md" dense flat square>
+    <q-btn padding="sm md" dense flat square @click="clickLoginBtn">
       <q-icon name="bi-person-square" />
     </q-btn>
-    <q-btn padding="sm" dense flat square @click="app_infos.printInfo()">
+    <q-dialog v-model="loginInception">
+      <user-login></user-login>
+    </q-dialog>
+    <q-btn padding="sm" dense flat square @click="clickInfoBtn">
       <q-icon name="bi-info-circle" />
     </q-btn>
-    <q-btn padding="sm" dense flat square @click="app_properties.toggleDarkMode"
+    <q-dialog v-model="infoInception" persistent transition-show="scale" transition-hide="scale">
+      <info-page></info-page>
+    </q-dialog>
+    <q-btn padding="sm" dense flat square @click="appProperties.toggleDarkMode"
       ><q-icon name="bi-moon-stars"
     /></q-btn>
   </q-toolbar>
 </template>
-
 <style scoped></style>

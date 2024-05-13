@@ -8,7 +8,6 @@
       {{ getWeatherData.wind }}
     </div>
     <div>
-
       {{ getWeatherData.temperature }}
       {{ getWeatherData.wind }}
     </div>

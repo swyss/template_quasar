@@ -3,8 +3,12 @@
     <div>
       <q-card>
         <q-card-section>
-          Hello-Page
+          Home-Page
         </q-card-section>
+        <q-card-actions>
+          <q-btn label="Action 1" />
+          <q-btn label="Action 2" />
+        </q-card-actions>
       </q-card>
     </div>
   </q-page>
@@ -12,6 +16,6 @@
 
 <script setup>
 defineOptions({
-  name: "IndexPage",
+  name: "MainPage",
 });
 </script>

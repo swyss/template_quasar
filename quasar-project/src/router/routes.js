@@ -13,20 +13,24 @@ const routes = [
       { path: "", component: () => import("pages/IndexPage.vue") },
       { path: "/hello", component: () => import("pages/main/HelloPage.vue") },
       {
+        path: "/home",
+        component: () => import("pages/main/HomePage.vue"),
+      },
+      {
         path: "/components",
-        component: () => import("pages/main/examples/componentsPage.vue"),
+        component: () => import("pages/main/examples/tabs/ComponentsPage.vue"),
       },
       {
         path: "/graphs",
-        component: () => import("pages/main/examples/graphPage.vue"),
+        component: () => import("pages/main/examples/tabs/GraphPage.vue"),
       },
       {
         path: "/weather",
-        component: () => import("pages/main/examples/weatherPage.vue"),
+        component: () => import("pages/main/examples/tabs/WeatherPage.vue"),
       },
       {
         path: "/axios",
-        component: () => import("pages/main/examples/axiosPage.vue"),
+        component: () => import("pages/main/examples/tabs/AxiosPage.vue"),
       },
     ],
   },

@@ -108,8 +108,9 @@ function showNotifyBtn() {
 </script>
 
 <template>
-  AXIOS
+  <h4>Notif</h4>
   <div class="q-pa-md q-gutter-y-sm column items-center">
+
     <div>
       <div class="row q-gutter-sm">
         <q-btn round size="sm" color="secondary" @click="showNotif('top-left')">
@@ -181,6 +182,82 @@ function showNotifyBtn() {
   </div>
   <div class="q-pa-md q-gutter-y-sm column items-center">
     <q-btn color="purple" @click="showNotifyBtn" label="Show with caption" />
+  </div>
+  <h4>Badge</h4>
+  <div class="q-pa-md q-gutter-md">
+    <q-badge color="blue">
+      #4D96F2
+    </q-badge>
+
+    <q-badge color="orange" text-color="black" label="2" />
+
+    <q-badge color="purple">
+      <q-icon name="bi-bluetooth" color="white" />
+    </q-badge>
+
+    <q-badge color="red">
+      12 <q-icon name="bi-exclamation-diamond" color="white" class="q-ml-xs" />
+    </q-badge>
+
+    <div class="text-h6">
+      Badge <q-badge color="primary">v1.0.0+</q-badge>
+    </div>
+
+    <div>
+      Feature <q-badge color="primary">v1.0.0+</q-badge>
+    </div>
+
+    <q-item
+      clickable
+      v-ripple
+      class="rounded-borders"
+      :class="$q.dark.isActive ? 'bg-grey-9 text-white' : 'bg-grey-2'"
+    >
+      <q-item-section avatar>
+        <q-avatar rounded>
+          <img src="https://cdn.quasar.dev/img/chaosmonkey.png">
+        </q-avatar>
+      </q-item-section>
+
+      <q-item-section>
+        <q-item-label>
+          Ganglia
+        </q-item-label>
+        <q-item-label caption>
+          <q-badge color="yellow-6" text-color="black">
+            3
+            <q-icon
+              name="bi-exclamation-diamond"
+              size="14px"
+              class="q-ml-xs"
+            />
+          </q-badge>
+        </q-item-label>
+      </q-item-section>
+
+      <q-item-section side>
+        <span>2 min ago</span>
+      </q-item-section>
+    </q-item>
+    <q-badge rounded color="yellow" />
+    <q-badge rounded color="green" />
+    <q-badge rounded color="red" />
+    <div class="q-gutter-md q-ml-none">
+      <q-btn round icon="bi-bell">
+        <q-badge floating color="red" rounded />
+      </q-btn>
+      <q-btn color="blue">
+        Notifications
+        <q-badge color="red" rounded floating />
+      </q-btn>
+    </div>
+    <div>
+      <q-badge color="blue" rounded class="q-mr-sm" />Status
+    </div>
+  </div>
+  <h4>Progress-Bar (AjaxBAr)</h4>
+  <div>
+    <q-btn color="primary" label="Trigger" @click="trigger" />
   </div>
 </template>
 

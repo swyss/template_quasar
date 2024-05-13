@@ -19,7 +19,7 @@ const app_properties = useAppProperties();
       ><q-icon name="bi-list"
     /></q-btn>
     <q-separator vertical inset color="on_primary" />
-    <q-btn padding="sm md" dense flat square><q-icon name="bi-house" /></q-btn>
+    <q-btn  padding="sm md" dense flat square><q-icon name="bi-house" @click="$router.replace('/home')"/></q-btn>
     <q-btn padding="sm md" dense flat square
       ><q-icon name="bi-star" color="accent"
     /></q-btn>

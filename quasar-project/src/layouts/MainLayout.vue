@@ -7,7 +7,9 @@
     <app-right-drawer></app-right-drawer>
     <!-- CONTENTS -->
     <q-page-container>
-      <router-view />
+      <div class="q-pa-md">
+        <router-view />
+      </div>
     </q-page-container>
     <!-- FOOTER -->
     <app-footer></app-footer>
